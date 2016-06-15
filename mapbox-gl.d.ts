@@ -2,6 +2,8 @@
 
 declare class mapboxgl {
 	static accessToken: string;
+    static supported(): boolean;
+    static config: mapboxgl.Config;
 }
 
 declare namespace mapboxgl {
@@ -591,6 +593,11 @@ declare namespace mapboxgl {
 
 	interface CameraAndAnimationOptions extends CameraOptions, AnimationOptions {
 	}
+
+    interface Config {
+        API_URL: string,
+        REQUIRE_ACCESS_TOKEN: boolean
+    }
 }
 
 declare module 'mapboxgl' {
