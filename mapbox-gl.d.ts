@@ -144,7 +144,7 @@ declare namespace mapboxgl {
 		getSouthWest(): LngLat;
 		/** Get west edge longitude */
 		getWest(): number;
-		
+
 		/** Returns a LngLatBounds as an array */
 		toArray(): Array<Array<number>>;
 		/** Return a LngLatBounds as a string */
@@ -218,7 +218,7 @@ declare namespace mapboxgl {
 
 		getBounds(): LngLatBounds;
 
-		setMaxBounds(bounds: LngLatBounds | Array<Array<number>> |null| undefined): this;
+		setMaxBounds(bounds?: LngLatBounds | Array<Array<number>>): this;
 
 		setMinZoom(minZoom: number): this;
 
@@ -271,7 +271,7 @@ declare namespace mapboxgl {
 
 		loaded(): boolean;
 
-		remove(): undefined;
+		remove(): void;
 
 		getCenter(): LngLat;
 
